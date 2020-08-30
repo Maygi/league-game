@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game Project Shell</title>
+    <script type="text/javascript" src="./gameengine.js"></script>
+    <script type="text/javascript" src="./assetmanager.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!--
+    style="margin-left:100px;margin-top:50px"
+    -->
+    <canvas id="gameWorld" tabindex="1" width="800" height="500"></canvas>
+    <button class="button" id="soundButton" onclick="musicControl()"><img id="image" src="img/UI/MusicOn.png"></button>
+    <p id="difficulty">Choose the difficulty</p>
+    <button class="button" id="easyButton" onclick="easyMode()">Easy</button>
+    <button class="button" id="mediumButton" onclick="mediumMode()">Medium</button>
+    <button class="button" id="hardButton" onclick="hardMode()">Hard</button>
+    <pre>
+W - Jump
+A/D - Move
+Y -> Autoattack chain
+U -> Quick strong attack
+A/D + U -> Side strong attack chain
+S + U -> Side dash with invuln frame
+Spacebar -> Speed up text
+
+Consecutive autoattacks or side
+strong attacks will result in higher
+damage numbers. Breaking the chain
+or waiting too long before finishing
+chain will reset the chain.
+
+While using your dash, you are 
+completely invulnerable to all
+attacks. Be aware though that all
+strong attacks and dashes consume
+stamina.
+
+Your quick strong attack and dash
+can be used to animation cancel
+your other abilities.
+
+Enemy attacks take priority over
+your own. If Rek'sai swings while
+you attack, you will get hurt while
+Rek'sai doesn't.
+    </pre>
+</body>
+</html>
