@@ -18,12 +18,16 @@ function Timer() {
 }
 
 Timer.prototype.tick = function () {
-    var wallCurrent = Date.now();
-    var wallDelta = (wallCurrent - this.wallLastTimestamp) / 1000;
+    var wallDelta = 0;
+    while (wallDelta < .016667) {
+        var wallCurrent = Date.now();
+        var wallDelta = (wallCurrent - this.wallLastTimestamp) / 1000;
+    }
     this.wallLastTimestamp = wallCurrent;
 
     var gameDelta = Math.min(wallDelta, this.maxStep);
     this.gameTime += gameDelta;
+    //console.log("delta: " + wallDelta + "; game delta: " + gameDelta +"; game time: " + this.gameTime);
     return gameDelta;
 };
 
