@@ -1868,10 +1868,10 @@ TextBox.prototype.update = function() {
 			if (c === '?' || (c.toLowerCase() != c.toUpperCase())) { // It's a character
                 if (soundOn) {
                     var sound = new Audio("./sounds/chat.wav");
-                    sound.volume = 0.4;
+                    sound.volume = 0.1;
                     if (this.image.indexOf("Riven") !== -1) {
                         sound = new Audio("./sounds/chat2.wav");
-                        sound.volume = 0.1;
+                        sound.volume = 0.05;
                     }
                     sound.play();
                 }
@@ -4215,7 +4215,7 @@ Character.prototype.update = function () {
     
     if (this.running) {
         if (soundOn) {
-            footsteps.volume = 0.8;
+            footsteps.volume = 0.3;
         } else {
             footsteps.volume = 0.0;
         }
